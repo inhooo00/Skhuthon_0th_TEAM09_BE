@@ -9,7 +9,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableJpaAuditing
 @SpringBootApplication
 public class Skhuthon0thTeam9Application {
-
     public static void main(String[] args) {
         SpringApplication.run(Skhuthon0thTeam9Application.class, args);
     }

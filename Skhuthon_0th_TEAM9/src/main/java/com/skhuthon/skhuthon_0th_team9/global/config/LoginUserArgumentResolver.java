@@ -1,13 +1,11 @@
 package com.skhuthon.skhuthon_0th_team9.global.config;
 
 import com.skhuthon.skhuthon_0th_team9.global.annotation.CurrentUser;
-import com.skhuthon.skhuthon_0th_team9.global.exception.ErrorCode;
-import com.skhuthon.skhuthon_0th_team9.global.exception.model.CustomException;
-import org.springframework.beans.propertyeditors.CustomNumberEditor;
+import com.skhuthon.skhuthon_0th_team9.global.common.exception.ErrorCode;
+import com.skhuthon.skhuthon_0th_team9.global.common.exception.model.CustomException;
 import org.springframework.core.MethodParameter;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.support.WebBindingInitializer;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;

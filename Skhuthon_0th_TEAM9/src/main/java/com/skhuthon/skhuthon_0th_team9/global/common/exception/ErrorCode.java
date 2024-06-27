@@ -31,7 +31,6 @@ public enum ErrorCode {
 
     // 401 Unauthorized
     UNAUTHORIZED_EMAIL_EXCEPTION(HttpStatus.UNAUTHORIZED, "이메일 인증이 되지 않은 유저"),
-    UNAUTHORIZED_EXCEPTION(HttpStatus.UNAUTHORIZED, "인증되지 않은 사용자거나 인증과정에 오류가 있습니다. "),
     INVALID_TOKEN_EXCEPTION(HttpStatus.UNAUTHORIZED, "유효하지 않은 토큰입니다."),
     UNAUTHORIZED_USER_EXCEPTION(HttpStatus.UNAUTHORIZED, "로그인이 필요합니다"),
 
@@ -43,6 +42,7 @@ public enum ErrorCode {
 
     // 404 NOT FOUND
     NOT_FOUND_ID_EXCEPTION(HttpStatus.NOT_FOUND, "찾을 수 없는 ID"),
+    NOT_FOUND_EMAIL_EXCEPTION(HttpStatus.NOT_FOUND, "찾을 수 없는 이메일"),
 
     // 409 Conflict
     ALREADY_EXIST_STUDENT_EXCEPTION(HttpStatus.CONFLICT, "이미 회원가입이 완료된 사용자입니다."),

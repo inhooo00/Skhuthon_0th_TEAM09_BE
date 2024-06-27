@@ -30,6 +30,7 @@ public enum ErrorCode {
     INVALID_FILE_TYPE_EXCEPTION(HttpStatus.BAD_REQUEST, "잘못된 형식의 파일입니다."),
     DUPLICATE_USER_EMAIL_EXCEPTION(HttpStatus.BAD_REQUEST, "이미 사용중인 이메일입니다, 이미 가입된 소셜 로그인 계정이 존재할 수 있습니다. "),
     DUPLICATE_USER_NICKNAME_EXCEPTION(HttpStatus.BAD_REQUEST, "이미 사용중인 닉네임입니다. "),
+    FAIL_TO_EMAIL_CERTIFICATION(HttpStatus.BAD_REQUEST, "이메일 인증코드가 일치하지 않습니다."),
 
     // 401 Unauthorized
     INVALID_EMAIL_PASSWORD_MATCH_EXCEPTION(HttpStatus.UNAUTHORIZED, "이메일과 비밀번호가 일치하지 않습니다. "),
@@ -44,6 +45,7 @@ public enum ErrorCode {
 
     // 404 NOT FOUND
     NOT_FOUND_ID_EXCEPTION(HttpStatus.NOT_FOUND, "찾을 수 없는 ID"),
+    NOT_FOUND_USER_EXCEPTION(HttpStatus.NOT_FOUND, "찾을 수 없는 사용자"),
     NOT_FOUND_EMAIL_EXCEPTION(HttpStatus.NOT_FOUND, "찾을 수 없는 이메일"),
 
     // 409 Conflict

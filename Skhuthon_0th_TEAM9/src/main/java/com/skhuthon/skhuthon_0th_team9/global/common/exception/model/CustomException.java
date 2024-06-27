@@ -1,6 +1,6 @@
-package com.skhuthon.skhuthon_0th_team9.global.exception.model;
+package com.skhuthon.skhuthon_0th_team9.global.common.exception.model;
 
-import com.skhuthon.skhuthon_0th_team9.global.exception.ErrorCode;
+import com.skhuthon.skhuthon_0th_team9.global.common.exception.ErrorCode;
 import lombok.Getter;
 
 @Getter

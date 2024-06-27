@@ -1,8 +1,8 @@
 package com.skhuthon.skhuthon_0th_team9.global.common.dto;
 
 
-import com.skhuthon.skhuthon_0th_team9.global.exception.ErrorCode;
-import com.skhuthon.skhuthon_0th_team9.global.exception.SuccessCode;
+import com.skhuthon.skhuthon_0th_team9.global.common.exception.ErrorCode;
+import com.skhuthon.skhuthon_0th_team9.global.common.exception.SuccessCode;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

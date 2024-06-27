@@ -1,8 +1,8 @@
 package com.skhuthon.skhuthon_0th_team9.global.common.advice;
 
 import com.skhuthon.skhuthon_0th_team9.global.common.dto.ApiResponseTemplate;
-import com.skhuthon.skhuthon_0th_team9.global.exception.ErrorCode;
-import com.skhuthon.skhuthon_0th_team9.global.exception.model.CustomException;
+import com.skhuthon.skhuthon_0th_team9.global.common.exception.ErrorCode;
+import com.skhuthon.skhuthon_0th_team9.global.common.exception.model.CustomException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;

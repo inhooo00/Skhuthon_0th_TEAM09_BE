@@ -1,4 +1,4 @@
-package com.skhuthon.skhuthon_0th_team9.global.exception;
+package com.skhuthon.skhuthon_0th_team9.global.common.exception;
 
 import lombok.AccessLevel;
 import lombok.Getter;

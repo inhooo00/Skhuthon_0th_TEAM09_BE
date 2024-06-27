@@ -28,9 +28,11 @@ public enum ErrorCode {
     SMS_CERTIFICATION_VERIFY_FAIL_EXCEPTION(HttpStatus.BAD_REQUEST, "문자 인증에 실패했습니다."),
     FAIL_ENCODING_IMAGE_FILE_NAME(HttpStatus.BAD_REQUEST, "파일명 인코딩에 실패했습니다."),
     INVALID_FILE_TYPE_EXCEPTION(HttpStatus.BAD_REQUEST, "잘못된 형식의 파일입니다."),
+    DUPLICATE_USER_EMAIL_EXCEPTION(HttpStatus.BAD_REQUEST, "이미 사용중인 이메일입니다, 이미 가입된 소셜 로그인 계정이 존재할 수 있습니다. "),
+    DUPLICATE_USER_NICKNAME_EXCEPTION(HttpStatus.BAD_REQUEST, "이미 사용중인 닉네임입니다. "),
 
     // 401 Unauthorized
-    UNAUTHORIZED_EMAIL_EXCEPTION(HttpStatus.UNAUTHORIZED, "이메일 인증이 되지 않은 유저"),
+    INVALID_EMAIL_PASSWORD_MATCH_EXCEPTION(HttpStatus.UNAUTHORIZED, "이메일과 비밀번호가 일치하지 않습니다. "),
     INVALID_TOKEN_EXCEPTION(HttpStatus.UNAUTHORIZED, "유효하지 않은 토큰입니다."),
     UNAUTHORIZED_USER_EXCEPTION(HttpStatus.UNAUTHORIZED, "로그인이 필요합니다"),
 

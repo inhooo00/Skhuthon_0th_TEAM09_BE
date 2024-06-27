@@ -11,6 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -34,6 +35,7 @@ public class SocialConnection {
     @JoinColumn(name = "user_id")
     private User user;
 
+    @Builder
     public SocialConnection(SocialType socialType, String socialId, User user) {
         this.socialType = socialType;
         this.socialId = socialId;

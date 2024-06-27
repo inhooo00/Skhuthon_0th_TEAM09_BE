@@ -67,7 +67,8 @@ public class UserDto {
     @NoArgsConstructor(access = AccessLevel.PROTECTED)
     public static class LoginResponse {
 
-        private String token;
+        private String accessToken;
+        private String refreshToken;
 
     }
 

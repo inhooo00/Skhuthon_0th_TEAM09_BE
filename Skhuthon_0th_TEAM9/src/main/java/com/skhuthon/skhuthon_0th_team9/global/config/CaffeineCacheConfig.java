@@ -1,6 +1,7 @@
 package com.skhuthon.skhuthon_0th_team9.global.config;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
+import com.skhuthon.skhuthon_0th_team9.global.CacheType;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.caffeine.CaffeineCache;
 import org.springframework.cache.support.SimpleCacheManager;

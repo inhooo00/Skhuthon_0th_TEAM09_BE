@@ -1,4 +1,4 @@
-package com.skhuthon.skhuthon_0th_team9.global.config;
+package com.skhuthon.skhuthon_0th_team9.global;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

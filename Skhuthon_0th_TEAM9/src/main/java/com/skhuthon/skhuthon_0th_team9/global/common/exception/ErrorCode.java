@@ -51,6 +51,8 @@ public enum ErrorCode {
     INTERNAL_SERVER_EXCEPTION(HttpStatus.INTERNAL_SERVER_ERROR, "알 수 없는 서버 에러가 발생했습니다."),
     TOKEN_CREATION_FAILED_EXCEPTION(HttpStatus.INTERNAL_SERVER_ERROR, "토큰을 생성하는 과정에서 알 수 없는 오류가 발생했습니다."),
     EMAIL_SEND_FAIL(HttpStatus.INTERNAL_SERVER_ERROR, "이메일 전송에 실패했습니다."),
+    FAIL_TO_GOOGLE_LOGIN(HttpStatus.INTERNAL_SERVER_ERROR, "구글 로그인에 실패했습니다."),
+    FAIL_TO_KAKAO_LOGIN(HttpStatus.INTERNAL_SERVER_ERROR, "카카오 로그인에 실패했습니다."),
 
     // 503 Service Unavailable
     FAILED_GET_TOKEN_EXCEPTION(HttpStatus.UNAVAILABLE_FOR_LEGAL_REASONS, "구글 엑세스 토큰을 가져오는데 실패했습니다."),

@@ -32,7 +32,7 @@ public class User extends UserBase{
     // 추후 추가할 컬럼이 있다면 추가
     // 컬럼 추가하면 OAuthDto에서 LoginRequest에 추가, login에서 builder 사용할때도 추가
 
-    @OneToMany(mappedBy = "users", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Board> boards = new ArrayList<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)

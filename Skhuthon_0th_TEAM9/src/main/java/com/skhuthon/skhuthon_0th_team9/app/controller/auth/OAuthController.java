@@ -20,7 +20,7 @@ public class OAuthController {
 
     private final GoogleOauthService googleOAuthService;
 
-    @GetMapping("kakao/callback")
+    @GetMapping("callback/kakao")
     public ResponseEntity<OAuthDto.LoginResponse> kakaoCallback(@RequestParam String code) {
         return ResponseEntity.ok(kakaoOAuthService.getAccessToken(code));
     }
@@ -30,7 +30,7 @@ public class OAuthController {
         return ResponseEntity.ok(kakaoOAuthService.getUserInfo(accessToken));
     }
 
-    @GetMapping("google/callback")
+    @GetMapping("callback/google")
     public ResponseEntity<OAuthDto.LoginResponse> googleCallback(@RequestParam String code) {
         return ResponseEntity.ok(googleOAuthService.getAccessToken(code));
     }

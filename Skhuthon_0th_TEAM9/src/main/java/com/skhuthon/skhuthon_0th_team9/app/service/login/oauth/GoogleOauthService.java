@@ -22,11 +22,11 @@ import java.util.Objects;
 @RequiredArgsConstructor
 public class GoogleOauthService implements OauthService {
 
-    @Value("${oauth.google.clientId}")
+    @Value("${oauth.google.client-id}")
     private String clientId;
-    @Value("${oauth.google.clientSecret}")
+    @Value("${oauth.google.client-secret}")
     private String clientSecret;
-    @Value("${oauth.google.redirectUri}")
+    @Value("${oauth.google.redirect-url}")
     private String redirectUri;
 
     private final RestTemplate restTemplate;

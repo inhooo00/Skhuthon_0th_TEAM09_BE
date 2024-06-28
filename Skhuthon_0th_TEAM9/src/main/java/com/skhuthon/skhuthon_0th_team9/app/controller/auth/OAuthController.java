@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class OAuthController {
 
     private final KakaoOAuthService kakaoOAuthService;
-
     private final GoogleOauthService googleOAuthService;
 
     @GetMapping("callback/kakao")

@@ -25,7 +25,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    @Value("${cors.allowed-origins[0]}")
+    @Value("${cors.allowed-origins}")
     private String allowedOrigins;
 
     private final TokenProvider tokenProvider;

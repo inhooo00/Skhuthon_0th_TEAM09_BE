@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: local
+    active: local, prod
     group:
       local: common
       prod: common
@@ -92,5 +92,5 @@ cloud:
     stack:
       auto: false
     credentials:
-      accessKey: ${S3_KEY}
-      secretKey: ${S3_SECRET_KEY}
+      AccessKey: ${S3_KEY}
+      SecretKey: ${S3_SECRET_KEY}

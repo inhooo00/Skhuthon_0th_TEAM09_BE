@@ -8,8 +8,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.MappedSuperclass;
+import lombok.Getter;
 
 @MappedSuperclass
+@Getter
 public abstract class DetailCategoryEntity {
     
     @Id

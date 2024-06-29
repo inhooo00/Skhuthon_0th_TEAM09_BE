@@ -7,10 +7,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.OneToMany;
+import lombok.Getter;
 
 import java.util.List;
 
 @MappedSuperclass
+@Getter
 public abstract class DepartmentCategoryEntity {
 
     @Id

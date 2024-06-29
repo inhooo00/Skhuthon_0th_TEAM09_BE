@@ -49,4 +49,9 @@ public class ReviewController {
     public List<ReviewCreateResponseDto> getAllReviews(){
         return reviewCreateService.getAllReviews();
     }
+
+    @GetMapping("/get/{categoryId}")
+    public List<ReviewCreateResponseDto> getReviewsByCategoryId(@PathVariable Long categoryId){
+        return reviewCreateService.getReviewsByDepartmentCategory(categoryId);
+    }
 }

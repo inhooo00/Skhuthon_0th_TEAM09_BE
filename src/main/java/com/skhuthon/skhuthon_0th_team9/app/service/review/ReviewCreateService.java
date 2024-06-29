@@ -105,4 +105,23 @@ public class ReviewCreateService {
 
         return reviewCreateResponseDtos;
     }
+    public List<ReviewCreateResponseDto> getReviewsByDepartmentCategory(Long departmentCategoryId){
+        List<Review> reviews = reviewRepository.findByDepartmentCategoryId(departmentCategoryId);
+
+        List<ReviewCreateResponseDto> reviewCreateResponseDtos = reviews.stream()
+                .map(review -> ReviewCreateResponseDto.builder()
+                        .id(review.getId())
+                        .title(review.getTitle())
+                        .description(review.getDescription())
+                        .imageUrls(review.getImageUrls())
+                        .createAt(review.getCreateAt())
+                        .modifiedAt(review.getModifiedAt())
+                        .userId(review.getUser().getId())
+                        .departmentCategory(review.getDepartmentCategory())
+                        .detailCategory(review.getDetailCategory())
+                        .build())
+                .collect(Collectors.toList());
+
+        return reviewCreateResponseDtos;
+    }
 }

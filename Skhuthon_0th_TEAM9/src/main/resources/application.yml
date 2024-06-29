@@ -75,3 +75,16 @@ spring:
 
   jpa:
     show-sql: false
+
+cloud:
+  aws:
+    s3:
+      bucket: ${S3_BUCKET}
+    region:
+      static: ap-northeast-2
+      auto: false
+    stack:
+      auto: false
+    credentials:
+      accessKey: ${S3_KEY}
+      secretKey: ${S3_SECRET_KEY}

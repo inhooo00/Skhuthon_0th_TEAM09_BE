@@ -19,7 +19,7 @@ public class ReviewCreateResponseDto {
     private List<String> imageUrls;
     private LocalDateTime createAt;
     private LocalDateTime modifiedAt;
-    private User user;
+    private Long userId;
     private DepartmentCategory departmentCategory;
     private DetailCategory detailCategory;
 

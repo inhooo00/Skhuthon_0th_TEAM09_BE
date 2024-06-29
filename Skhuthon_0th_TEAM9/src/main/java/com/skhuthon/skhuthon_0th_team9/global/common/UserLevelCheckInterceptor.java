@@ -26,7 +26,10 @@ public class UserLevelCheckInterceptor implements HandlerInterceptor {
                              @NonNull HttpServletResponse response,
                              @NonNull Object handler) {
 
-        HandlerMethod handlerMethod = (HandlerMethod) handler;
+        if (!(handler instanceof HandlerMethod handlerMethod)) {
+            return true;
+        }
+
         UserLevelCheck userLevelCheck = handlerMethod.getMethodAnnotation(UserLevelCheck.class);
 
         if (userLevelCheck == null) {

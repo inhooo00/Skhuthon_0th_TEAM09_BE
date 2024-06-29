@@ -23,7 +23,7 @@ import java.util.Set;
 @AllArgsConstructor
 public class User extends UserBase{
 
-    @Column(unique = true)
+    @Column(name = "USER_NICKNAME")
     private String nickName;
 
     // 추후 추가할 컬럼이 있다면 추가

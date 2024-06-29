@@ -1,13 +1,10 @@
 package com.skhuthon.skhuthon_0th_team9.app.domain.user;
 
-import com.skhuthon.skhuthon_0th_team9.app.domain.Board;
+import com.skhuthon.skhuthon_0th_team9.app.domain.review.Review;
 import com.skhuthon.skhuthon_0th_team9.app.domain.user.social.SocialConnection;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -33,7 +30,7 @@ public class User extends UserBase{
     // 컬럼 추가하면 OAuthDto에서 LoginRequest에 추가, login에서 builder 사용할때도 추가
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Board> boards = new ArrayList<>();
+    private List<Review> reviews = new ArrayList<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<SocialConnection> socialConnectionSet = new HashSet<>();

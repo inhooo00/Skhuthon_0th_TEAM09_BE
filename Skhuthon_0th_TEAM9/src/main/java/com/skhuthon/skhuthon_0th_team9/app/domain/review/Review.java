@@ -1,6 +1,8 @@
-package com.skhuthon.skhuthon_0th_team9.app.domain;
+package com.skhuthon.skhuthon_0th_team9.app.domain.review;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.skhuthon.skhuthon_0th_team9.app.domain.category.DepartmentCategory;
+import com.skhuthon.skhuthon_0th_team9.app.domain.category.DetailCategory;
 import com.skhuthon.skhuthon_0th_team9.app.domain.user.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
@@ -11,6 +13,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,20 +26,20 @@ import java.util.List;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
-public class Board {
+public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "BOARD_ID")
+    @Column(name = "REVIEW_ID")
     private Long id;
 
-    @Column(name = "BOARD_TITLE")
+    @Column(name = "REVIEW_TITLE")
     private String title;
 
-    @Column(name = "BOARD_DESCRIPTION")
+    @Column(name = "REVIEW_DESCRIPTION")
     private String description;
 
-    @Column(name = "BOARD_IMAGE_URLS")
+    @Column(name = "REVIEW_IMAGE_URLS")
     @ElementCollection(fetch = FetchType.LAZY)
     private List<String> imageUrls;
 
@@ -50,5 +53,12 @@ public class Board {
     @JoinColumn(name = "user_id")
     private User user;
 
-    // 게시글의 카테고리를 관리하는 domain을 추가로 설계하고 연관관계를 가져야함
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "department_category_id")
+    private DepartmentCategory departmentCategory;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "detail_category_id")
+    private DetailCategory detailCategory;
+
 }

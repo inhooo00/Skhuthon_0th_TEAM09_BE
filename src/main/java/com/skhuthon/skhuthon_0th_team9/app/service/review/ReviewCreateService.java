@@ -86,4 +86,23 @@ public class ReviewCreateService {
                 .detailCategory(review.getDetailCategory())
                 .build();
     }
+    public List<ReviewCreateResponseDto> getAllReviews(){
+        List<Review> reviews = reviewRepository.findAll();
+
+        List<ReviewCreateResponseDto> reviewCreateResponseDtos = reviews.stream()
+                .map(review -> ReviewCreateResponseDto.builder()
+                        .id(review.getId())
+                        .title(review.getTitle())
+                        .description(review.getDescription())
+                        .imageUrls(review.getImageUrls())
+                        .createAt(review.getCreateAt())
+                        .modifiedAt(review.getModifiedAt())
+                        .userId(review.getUser().getId())
+                        .departmentCategory(review.getDepartmentCategory())
+                        .detailCategory(review.getDetailCategory())
+                        .build())
+                .collect(Collectors.toList());
+
+        return reviewCreateResponseDtos;
+    }
 }

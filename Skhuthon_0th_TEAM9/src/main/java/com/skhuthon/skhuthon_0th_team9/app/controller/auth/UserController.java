@@ -59,4 +59,13 @@ public class UserController {
         return ResponseEntity.ok(userService.verifyCertificationCode(email, code));
     }
 
+    @GetMapping("/duplicate/email")
+    public ResponseEntity<Boolean> checkEmailDuplicate(@RequestBody String email) {
+        return ResponseEntity.ok(userService.checkEmailDuplicate(email));
+    }
+
+    @GetMapping("/duplicate/nickname")
+    public ResponseEntity<Boolean> checkNicknameDuplicate(@RequestBody String nickname) {
+        return ResponseEntity.ok(userService.checkNicknameDuplicate(nickname));
+    }
 }

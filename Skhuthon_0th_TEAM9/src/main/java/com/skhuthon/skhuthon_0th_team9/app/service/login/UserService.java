@@ -41,11 +41,11 @@ public class UserService {
                 .build());
     }
 
-    private boolean checkEmailDuplicate(String email) {
+    public boolean checkEmailDuplicate(String email) {
         return userRepository.existsByEmail(email);
     }
 
-    private boolean checkNicknameDuplicate(String nickname) {
+    public boolean checkNicknameDuplicate(String nickname) {
         return userRepository.existsByNickName(nickname);
     }
 

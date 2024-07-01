@@ -46,7 +46,7 @@ public class TokenProvider {
                 .claim("userLevel", userAccessLevel)
                 .setIssuedAt(now)
                 .setExpiration(tokenExpiredTime)
-                .signWith(key, SignatureAlgorithm.HS512)
+                .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
     }
 
@@ -59,7 +59,7 @@ public class TokenProvider {
                 .claim("userLevel", userAccessLevel)
                 .setIssuedAt(now)
                 .setExpiration(tokenExpiredTime)
-                .signWith(key, SignatureAlgorithm.HS512)
+                .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
     }
 
